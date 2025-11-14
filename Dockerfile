@@ -21,4 +21,4 @@ COPY start.sh /
 RUN chmod +x /start.sh
 
 # Start the container
-CMD ["/start.sh"]
+CMD ["start.sh"]
