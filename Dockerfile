@@ -9,13 +9,13 @@ RUN apt-get update && apt-get install -y curl
 RUN curl -fsSL https://ollama.com/install.sh | bash
 
 # Install dependencies
-COPY requirements.txt *.py /
+COPY requirements.txt *.py .
 
 RUN pip3 install --no-cache-dir runpod
 RUN pip3 install -r /requirements.txt
 
 #Copy the start script
-COPY start.sh /
+COPY start.sh .
 
 # Make the start script executable
 RUN chmod +x /start.sh
